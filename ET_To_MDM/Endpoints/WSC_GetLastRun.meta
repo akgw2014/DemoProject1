@@ -1,0 +1,10 @@
+<com.approuter.studio.repository.model.EntryMetaData>
+  <__metaData>
+    <properties/>
+  </__metaData>
+  <__namespace>http://www.approuter.com/schemas/2004/1/module/webservice/endpoint/</__namespace>
+  <__commentText>Web Services Client for Get Last Run</__commentText>
+  <__valid>true</__valid>
+  <__hidden>false</__hidden>
+  <__guid>DB07204A678FE0AF66215E8492EC0CEF</__guid>
+</com.approuter.studio.repository.model.EntryMetaData>

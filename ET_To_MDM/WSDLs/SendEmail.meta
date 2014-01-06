@@ -1,0 +1,10 @@
+<com.approuter.studio.repository.model.EntryMetaData>
+  <__metaData>
+    <properties/>
+  </__metaData>
+  <__namespace>http://www.approuter.com/schemas/2003/1/wsdl/</__namespace>
+  <__commentText>WSDL for the Send Email interface of the Common Utilities.</__commentText>
+  <__valid>true</__valid>
+  <__hidden>false</__hidden>
+  <__guid>11F16A853A09ABCB7AF03AA0A8134E8B</__guid>
+</com.approuter.studio.repository.model.EntryMetaData>

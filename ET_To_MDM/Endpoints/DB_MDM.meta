@@ -1,0 +1,10 @@
+<com.approuter.studio.repository.model.EntryMetaData>
+  <__metaData>
+    <properties/>
+  </__metaData>
+  <__namespace>http://www.approuter.com/schemas/2004/1/module/database/connection/</__namespace>
+  <__commentText>Microsoft SQL Server for the MDM application.</__commentText>
+  <__valid>true</__valid>
+  <__hidden>false</__hidden>
+  <__guid>CE9F36C43FFF36DD5F4EA30C33A70C0E</__guid>
+</com.approuter.studio.repository.model.EntryMetaData>

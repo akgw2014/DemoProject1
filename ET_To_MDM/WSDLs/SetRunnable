@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="WSSetRunnable" targetNamespace="http://www.approuter.com/connectors/wsdl" xmlns="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.approuter.com/connectors/wsdl" xmlns:tns1="http://www.approuter.com/connectors/request/3223/" xmlns:tns2="http://www.approuter.com/connectors/response/3223/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.approuter.com/connectors/request/3223/" xmlns:tns="http://www.approuter.com/connectors/request/3223/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Runnable">
+        <xs:complexType mixed="true">
+            <xs:choice maxOccurs="unbounded" minOccurs="0">
+                <xs:element ref="tns:getRunnableRequest"/>
+                <xs:element ref="tns:getRunnableResponse"/>
+                <xs:element ref="tns:setRunnableRequest"/>
+                <xs:element ref="tns:setRunnableResponse"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getRunnableRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:callerJobID"/>
+                <xs:element ref="tns:applianceName"/>
+                <xs:element ref="tns:projectName"/>
+                <xs:element ref="tns:orchestrationName"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getRunnableResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:runnable"/>
+                <xs:element ref="tns:statusCode"/>
+                <xs:element ref="tns:statusMsg"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="setRunnableRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:callerJobID"/>
+                <xs:element ref="tns:applianceName"/>
+                <xs:element ref="tns:projectName"/>
+                <xs:element ref="tns:orchestrationName"/>
+                <xs:element ref="tns:runnable"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="setRunnableResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:statusCode"/>
+                <xs:element ref="tns:statusMsg"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="statusCode" type="xs:string"/>
+    <xs:element name="statusMsg" type="xs:string"/>
+    <xs:element name="callerJobID" type="xs:string"/>
+    <xs:element name="applianceName" type="xs:string"/>
+    <xs:element name="projectName" type="xs:string"/>
+    <xs:element name="orchestrationName" type="xs:string"/>
+    <xs:element name="runnable" type="xs:string"/>
+</xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.approuter.com/connectors/response/3223/" xmlns:tns="http://www.approuter.com/connectors/response/3223/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Runnable">
+        <xs:complexType mixed="true">
+            <xs:choice maxOccurs="unbounded" minOccurs="0">
+                <xs:element ref="tns:getRunnableRequest"/>
+                <xs:element ref="tns:getRunnableResponse"/>
+                <xs:element ref="tns:setRunnableRequest"/>
+                <xs:element ref="tns:setRunnableResponse"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getRunnableRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:callerJobID"/>
+                <xs:element ref="tns:applianceName"/>
+                <xs:element ref="tns:projectName"/>
+                <xs:element ref="tns:orchestrationName"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getRunnableResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:runnable"/>
+                <xs:element ref="tns:statusCode"/>
+                <xs:element ref="tns:statusMsg"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="setRunnableRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:callerJobID"/>
+                <xs:element ref="tns:applianceName"/>
+                <xs:element ref="tns:projectName"/>
+                <xs:element ref="tns:orchestrationName"/>
+                <xs:element ref="tns:runnable"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="setRunnableResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:statusCode"/>
+                <xs:element ref="tns:statusMsg"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="statusCode" type="xs:string"/>
+    <xs:element name="statusMsg" type="xs:string"/>
+    <xs:element name="callerJobID" type="xs:string"/>
+    <xs:element name="applianceName" type="xs:string"/>
+    <xs:element name="projectName" type="xs:string"/>
+    <xs:element name="orchestrationName" type="xs:string"/>
+    <xs:element name="runnable" type="xs:string"/>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WSSetRunnableRequest">
+    <wsdl:part element="tns1:setRunnableRequest" name="request">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WSSetRunnableResponse">
+    <wsdl:part element="tns2:setRunnableResponse" name="response">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WSSetRunnablePort">
+    <wsdl:operation name="WSSetRunnable">
+      <wsdl:input message="tns:WSSetRunnableRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:WSSetRunnableResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSSetRunnableBinding" type="tns:WSSetRunnablePort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WSSetRunnable">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSSetRunnableService">
+    <wsdl:port binding="tns:WSSetRunnableBinding" name="WSSetRunnablePort">
+      <soap:address location="http://{property:/WSDL_SOAP_Address_setRunnable_WSSetRunnable_3223}:{property:/commonPort}/{property:/setRunnableWSPath}"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

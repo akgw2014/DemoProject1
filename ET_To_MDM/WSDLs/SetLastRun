@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="WSSetLastRun" targetNamespace="http://www.approuter.com/connectors/wsdl" xmlns="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.approuter.com/connectors/wsdl" xmlns:tns1="http://www.approuter.com/connectors/request/325/" xmlns:tns2="http://www.approuter.com/connectors/response/325/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.approuter.com/connectors/request/325/" xmlns:tns="http://www.approuter.com/connectors/request/325/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="getLastRunRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="1" name="callerJobID" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" name="applianceName" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" name="projectName" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" name="orchestrationName" nillable="false" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getLastRunResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="1" minOccurs="0" name="lastRun" nillable="true" type="xs:string"/>
+                <xs:element maxOccurs="1" name="statusCode" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" minOccurs="0" name="statusMsg" nillable="true" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="setLastRunRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="1" name="callerJobID" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" name="applianceName" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" name="projectName" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" name="orchestrationName" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" name="lastRun" nillable="false" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="setLastRunResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="1" minOccurs="0" name="statusCode" nillable="true" type="xs:string"/>
+                <xs:element maxOccurs="1" minOccurs="0" name="statusMsg" nillable="true" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.approuter.com/connectors/response/325/" xmlns:tns="http://www.approuter.com/connectors/response/325/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="getLastRunRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="1" name="callerJobID" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" name="applianceName" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" name="projectName" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" name="orchestrationName" nillable="false" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getLastRunResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="1" minOccurs="0" name="lastRun" nillable="true" type="xs:string"/>
+                <xs:element maxOccurs="1" name="statusCode" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" minOccurs="0" name="statusMsg" nillable="true" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="setLastRunRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="1" name="callerJobID" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" name="applianceName" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" name="projectName" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" name="orchestrationName" nillable="false" type="xs:string"/>
+                <xs:element maxOccurs="1" name="lastRun" nillable="false" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="setLastRunResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="1" minOccurs="0" name="statusCode" nillable="true" type="xs:string"/>
+                <xs:element maxOccurs="1" minOccurs="0" name="statusMsg" nillable="true" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WSSetLastRunRequest">
+    <wsdl:part element="tns1:setLastRunRequest" name="request">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WSSetLastRunResponse">
+    <wsdl:part element="tns2:setLastRunResponse" name="response">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WSSetLastRunPort">
+    <wsdl:operation name="WSSetLastRun">
+      <wsdl:input message="tns:WSSetLastRunRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:WSSetLastRunResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSSetLastRunBinding" type="tns:WSSetLastRunPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WSSetLastRun">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSSetLastRunService">
+    <wsdl:port binding="tns:WSSetLastRunBinding" name="WSSetLastRunPort">
+      <soap:address location="http://{property:/WSDL_SOAP_Address_setLastRun_WSSetLastRun_325}:{property:/commonPort}/{property:/setLastRunWSPath}"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,10 @@
+<com.approuter.studio.repository.model.EntryMetaData>
+  <__metaData>
+    <properties/>
+  </__metaData>
+  <__namespace>http://schemas.xmlsoap.org/ws/2003/03/business-process/</__namespace>
+  <__commentText>Queries ET Batch Headers for Ready to load Details and processes the Detail records to the MDM DB. Updates the status back into ET depending on the status of processing.</__commentText>
+  <__valid>true</__valid>
+  <__hidden>false</__hidden>
+  <__guid>9F01258CF92E17698664D662150FDD9B</__guid>
+</com.approuter.studio.repository.model.EntryMetaData>

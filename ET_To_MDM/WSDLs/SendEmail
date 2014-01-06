@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="WSSendEmail" targetNamespace="http://www.approuter.com/connectors/wsdl" xmlns="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.approuter.com/connectors/wsdl" xmlns:tns1="http://www.approuter.com/connectors/request/17/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.approuter.com/connectors/request/17/" xmlns:tns="http://www.approuter.com/connectors/request/17/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Email">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="1" minOccurs="0" name="to" nillable="true" type="xs:string"/>
+                <xs:element maxOccurs="1" minOccurs="0" name="cc" nillable="true" type="xs:string"/>
+                <xs:element maxOccurs="1" minOccurs="0" name="from" nillable="true" type="xs:string"/>
+                <xs:element maxOccurs="1" minOccurs="0" name="subject" nillable="true" type="xs:string"/>
+                <xs:element maxOccurs="1" minOccurs="0" name="body" nillable="true">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="text" type="xs:string"/>
+                            <xs:element name="contentType" type="xs:string"/>
+                            <xs:element name="charset" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="Attachments" nillable="true">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="attachment" nillable="true">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                    <xs:element name="data" type="xs:string"/>
+                                    <xs:element name="contentType" type="xs:string"/>
+                                    <xs:element name="contentTransferEncoding" type="xs:string"/>
+                                    <xs:element name="filename" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WSSendEmailRequest">
+    <wsdl:part element="tns1:Email" name="request">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WSSendEmailPort">
+    <wsdl:operation name="WSSendEmail">
+      <wsdl:input message="tns:WSSendEmailRequest">
+    </wsdl:input>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSSendEmailBinding" type="tns:WSSendEmailPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WSSendEmail">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSSendEmailService">
+    <wsdl:port binding="tns:WSSendEmailBinding" name="WSSendEmailPort">
+      <soap:address location="http://{property:/WSDL_SOAP_Address_sendEmail_WSSendEmail_17}:{property:/commonPort}/{property:/sendEmailWSPath}"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

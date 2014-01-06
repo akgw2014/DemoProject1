@@ -1,0 +1,24 @@
+<com.approuter.studio.repository.model.EntryMetaData>
+  <__metaData>
+    <properties>
+      <entry>
+        <string>variables</string>
+        <list>
+          <string>getLastRunRequest</string>
+          <string>getLastRunResponse</string>
+          <string>setLastRunRequest</string>
+          <string>setLastRunResponse</string>
+          <string>getLastRunRequest</string>
+          <string>getLastRunResponse</string>
+          <string>setLastRunRequest</string>
+          <string>setLastRunResponse</string>
+        </list>
+      </entry>
+    </properties>
+  </__metaData>
+  <__namespace>http://www.approuter.com/schemas/2003/1/wsdl/</__namespace>
+  <__commentText>WSDL for the Set Last Run interface of the Common Utilities.</__commentText>
+  <__valid>true</__valid>
+  <__hidden>false</__hidden>
+  <__guid>A126F0503FE1EFF7E1E3A2E18EFB5F31</__guid>
+</com.approuter.studio.repository.model.EntryMetaData>

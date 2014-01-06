@@ -1,0 +1,10 @@
+<com.approuter.studio.repository.model.EntryMetaData>
+  <__metaData>
+    <properties/>
+  </__metaData>
+  <__namespace>http://www.approuter.com/schemas/2004/1/module/webservice/endpoint/</__namespace>
+  <__commentText>Web Services Client for Log Error</__commentText>
+  <__valid>true</__valid>
+  <__hidden>false</__hidden>
+  <__guid>0FDC7FD20C799E446F5243C1A97D17E1</__guid>
+</com.approuter.studio.repository.model.EntryMetaData>

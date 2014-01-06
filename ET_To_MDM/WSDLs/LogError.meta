@@ -1,0 +1,10 @@
+<com.approuter.studio.repository.model.EntryMetaData>
+  <__metaData>
+    <properties/>
+  </__metaData>
+  <__namespace>http://www.approuter.com/schemas/2003/1/wsdl/</__namespace>
+  <__commentText>WSDL for the Log Error interface of the Common Utilities.</__commentText>
+  <__valid>true</__valid>
+  <__hidden>false</__hidden>
+  <__guid>18D9D70DE03527B35874C47BD9FDEFAE</__guid>
+</com.approuter.studio.repository.model.EntryMetaData>
